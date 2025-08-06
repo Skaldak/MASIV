@@ -11,7 +11,7 @@
 
 ![](./assets/pipeline.png)
 
-MASIV determines object geometry and governing physical laws from videos, without assuming a scene-specific material prior.
+MASIV determines object geometry and governing physical laws from videos in a material-agnostic manner.
 
 ## TODO
 
