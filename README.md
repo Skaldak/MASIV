@@ -18,7 +18,7 @@ MASIV determines object geometry and governing physical laws from videos in a ma
 ## TODO
 
 - [x] Code release
-- [x] Multi-Sequence Dataset release
+- [x] MASIV Multi-Sequence Dataset release
 
 ## Environment
 
@@ -57,13 +57,13 @@ The structure of the dataset and model files is as follows:
 │           ├── burger
 │           ├── ...
 │   | Genesis
-│       | multi_series
+│       | MASIV
 │
 ```
-### Multi-Series Dataset
+### MASIV Multi-Sequence Dataset
 
-We introduce a novel high-quality multi-view and multi-series dataset built on [Genesis](https://github.com/Genesis-Embodied-AI/Genesis).
-The dataset features multi-view and multi-series recordings, capturing diverse material behaviors across 10 object geometries and 5 material types. 
+We introduce a novel high-quality multi-view and multi-sequence dataset built on [Genesis](https://github.com/Genesis-Embodied-AI/Genesis).
+The dataset features multi-view and multi-sequence recordings, capturing diverse material behaviors across 10 object geometries and 5 material types. 
 Each combination is recorded from multiple synchronized camera viewpoints, providing coverage for both dynamic reconstruction and material identification learning.
 Our data is available on [Hugging Face](https://huggingface.co/datasets/CMURI/MASIV).
 
@@ -165,7 +165,7 @@ Arguments:
 
 ## Acknowledgments
 
-We sincerely thank the authors of [Dynamic 3D Gaussians](https://dynamic3dgaussians.github.io/), [PAC-NeRF](https://xuan-li.github.io/PAC-NeRF/), [Spring-Gaus](https://zlicheng.com/spring_gaus/) and [GIC](https://jukgei.github.io/project/gic/) whose codes and datasets were used in our work.
+We sincerely thank the authors of [Dynamic 3D Gaussians](https://dynamic3dgaussians.github.io/), [PAC-NeRF](https://xuan-li.github.io/PAC-NeRF/), [Spring-Gaus](https://zlicheng.com/spring_gaus/), and [GIC](https://jukgei.github.io/project/gic/) whose codes and datasets were used in our work.
 
 ## Citing MASIV
 
