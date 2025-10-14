@@ -1,0 +1,93 @@
+data:
+  xyz_max:
+  - 0.1
+  - 0.3
+  - 0.1
+  xyz_min:
+  - -0.1
+  - 0.0
+  - -0.1
+gs:
+  eval: true
+  is_blender: true
+  iteration: 40000
+  quiet: false
+  save_iterations:
+  - 7000
+  - 10000
+  - 20000
+  - 30000
+  - 40000
+  test_iterations:
+  - 5000
+  - 6000
+  - 7000
+  timenet: true
+physics:
+  bc:
+    ground:
+    - - 0
+      - 0
+      - 0
+    - - 0
+      - 1
+      - 0
+    - 0
+  density_grid_size: 0.01
+  density_max_th: 0.8
+  density_min_th: 0.6
+  fps: 50
+  geo_loss: true
+  gravity:
+  - 0
+  - -9.8
+  - 0
+  id: 0
+  img_loss: true
+  init_plastic_viscosity: 0.0
+  init_vel:
+  - 0.0
+  - 0.0
+  - 0.0
+  init_yield_stress: 1.0
+  iter_cnt: 350
+  kappa: 10000.0
+  material: 12
+  mpm_iter_cnt: 200
+  mu: 100.0
+  n_frames: 14
+  offset:
+  - 2.0
+  - 0.0
+  - 2.0
+  opacity_threshold: 0.01
+  params:
+    Yield stress:
+      final_lr: 0.02
+      init_lr: 0.1
+      lr_decay: true
+      max_steps: 60
+    bulk modulus:
+      final_lr: 0.1
+      init_lr: 0.5
+      lr_decay: false
+      max_steps: 150
+    plastic viscosity:
+      final_lr: 0.01
+      init_lr: 0.05
+      lr_decay: false
+      max_steps: 60
+    shear modulus:
+      final_lr: 0.05
+      init_lr: 0.1
+      lr_decay: true
+      max_steps: 60
+  random_sample: false
+  rho: 1000
+  vel_estimation_frames: 4
+  vel_iter_cnt: 100
+  vel_lr: 0.05
+  voxel_size: 0.002
+  w_alp: 0.3
+  w_geo: 1.0
+  w_img: 0.0

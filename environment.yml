@@ -1,0 +1,33 @@
+name: masiv
+channels:
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.10
+  - pytorch
+  - pytorch-cuda=12.4
+  - torchvision
+  - pip:
+      - numpy<2
+      - dearpygui
+      - imageio
+      - imageio-ffmpeg
+      - lpips
+      - mmcv
+      - ninja
+      - open3d
+      - opencv-python
+      - plyfile
+      - scipy
+      - taichi
+      - torch-scatter
+      - tqdm
+      - trimesh
+      - einops
+      - kornia
+      - omegaconf
+      - warp-lang
+      - git+https://github.com/jukgei/diff-gaussian-rasterization.git@b1e1cb83e27923579983a9ed19640c6031112b94
+      - git+https://gitlab.inria.fr/bkerbl/simple-knn.git
+      - git+https://github.com/facebookresearch/pytorch3d.git
+

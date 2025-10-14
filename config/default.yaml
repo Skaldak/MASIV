@@ -1,0 +1,131 @@
+env:
+  shape:
+    type: gs
+  rho: 1000.0
+  clip_bound: 0.5
+  pretrain: null
+  satisfy_cfl: false
+  simplify_velocity: true
+
+sim:
+  center: 0.5
+  size: 1.0
+  num_grids: 32
+  dt: null
+  bound: 1
+  gravity:
+    - 0.0
+    - -9.8
+    - 0.0
+  bc: noslip
+  eps: 1e-7
+  substeps: 200
+
+canonical:
+  num_epochs: 10000
+  num_frames: 1
+
+registration:
+  iterations: 20000
+  vis_interval: 2000
+  lambda_dssim: 0.0
+  rotation_lr: 0.0001
+  translation_lr: 0.00005
+  scale_lr: 0.00001
+
+deformation:
+  num_epochs: 10000
+
+velocity:
+  num_epochs: 100
+  num_frames: 3
+  lr: 1e0
+  scheduler:
+    type: cos
+    max_steps: 100
+    learning_rate_alpha: 0.01
+  resume: null
+
+preset:
+#  E: 2e6
+#  nu: 4e-1
+  nu_bound:
+    - -0.99
+    - 0.5
+#  sigma_y: 1e3
+#  eta: 1e0
+#  friction_angle: 2.5e1
+#  cohesion: 0.0
+  mode: ziran
+  random: false
+  num_epochs: 200
+
+categorical:
+  num_epochs: 500
+  materials:
+    - elastic
+    - newtonian
+    - non_newtonian
+    - plasticine
+    - sand
+  elasticity:
+#    - CorotatedElasticity
+    - NeoHookeanElasticity
+    - StVKElasticity
+    - VolumeElasticity
+    - SigmaElasticity
+  plasticity:
+    - IdentityPlasticity
+#    - SigmaPlasticity
+    - ViscoPlasticity
+    - VonMisesPlasticity
+    - DruckerPragerPlasticity
+
+meta:
+  elasticity:
+    layer_widths:
+      - 64
+      - 64
+    norm: null
+    nonlinearity: gelu
+    no_bias: true
+    normalize_input: true
+  elasticity_lr: 1e-1
+  elasticity_wd: 0.0
+  elasticity_grad_max_norm: 1e-1
+  elasticity_scheduler:
+    type: cos
+    max_steps: 1000
+    learning_rate_alpha: 0.01
+  plasticity:
+    layer_widths:
+      - 64
+      - 64
+    norm: null
+    param_alpha: false
+    alpha: 0.001
+    nonlinearity: gelu
+    no_bias: true
+    normalize_input: true
+  plasticity_lr: 1e-2
+  plasticity_wd: 0.0
+  plasticity_grad_max_norm: 1e-1
+  plasticity_scheduler:
+    type: cos
+    max_steps: 1000
+    learning_rate_alpha: 0.01
+  warmup_step: 0
+  decay_init: 0.5
+  decay_final: 1.0
+  decay_steps: 80
+  lambda_max_decay: 0.33
+  num_epochs: 1000
+  num_frames: 100
+  series: 0,1,2,3,4
+  resume: null
+  r_smth: 0.0
+  r_arap: 0.0
+  w_velo: 1.0
+  w_traj: 10.0
+  w_surf: 1.0
+  w_cont: 0.0

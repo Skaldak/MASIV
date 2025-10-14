@@ -1,0 +1,81 @@
+data:
+  xyz_max:
+  - 0.6
+  - 1.0
+  - 0.7
+  xyz_min:
+  - 0.4
+  - 0.3
+  - 0.3
+gs:
+  eval: true
+  is_blender: true
+  iteration: 40000
+  quiet: false
+  save_iterations:
+  - 7000
+  - 10000
+  - 20000
+  - 30000
+  - 40000
+  test_iterations:
+  - 5000
+  - 6000
+  - 7000
+  timenet: true
+physics:
+  bc:
+    ground:
+    - - 0
+      - 0.2
+      - 0
+    - - 0
+      - 1
+      - 0
+    - 0
+  density_grid_size: 0.1
+  density_max_th: 0.8
+  density_min_th: 0.67
+  fps: 33.3333333
+  geo_loss: true
+  gravity:
+  - 0
+  - -9.8
+  - 0
+  id: 0
+  img_loss: true
+  init_E: 5.0
+  init_nu: 0.1
+  init_vel:
+  - 0.0
+  - 0.0
+  - 0.0
+  iter_cnt: 100
+  material: 10
+  mpm_iter_cnt: 200
+  n_frames: 20
+  offset:
+  - 0.0
+  - 0.0
+  - 0.0
+  opacity_threshold: 0.005
+  params:
+    Poisson ratio:
+      final_lr: 0.0025
+      init_lr: 0.05
+      lr_decay: true
+      max_steps: 60
+    Youngs modulus:
+      final_lr: 0.01
+      init_lr: 0.1
+      lr_decay: true
+      max_steps: 60
+  random_sample: false
+  rho: 1000
+  vel_estimation_frames: 3
+  vel_iter_cnt: 100
+  vel_lr: 0.05
+  voxel_size: 0.02
+  w_alp: 1.0
+  w_geo: 1.0
+  w_img: 0.0
