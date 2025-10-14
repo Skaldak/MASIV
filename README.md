@@ -172,13 +172,10 @@ We sincerely thank the authors of [Dynamic 3D Gaussians](https://dynamic3dgaussi
 If you find this project helpful for your research, please consider citing the following BibTeX entry:
 
 ```
-@misc{zhao2025masivmaterialagnosticidentificationvideos,
-      title={MASIV: Toward Material-Agnostic System Identification from Videos}, 
-      author={Yizhou Zhao and Haoyu Chen and Chunjiang Liu and Zhenyang Li and Charles Herrmann and Junhwa Hur and Yinxiao Li and Ming-Hsuan Yang and Bhiksha Raj and Min Xu},
-      year={2025},
-      eprint={2508.01112},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2508.01112}, 
+@article{zhao2025masiv,
+  title={MASIV: Toward Material-Agnostic System Identification from Videos},
+  author={Zhao, Yizhou and Chen, Haoyu and Liu, Chunjiang and Li, Zhenyang and Herrmann, Charles and Hur, Junhwa and Li, Yinxiao and Yang, Ming-Hsuan and Raj, Bhiksha and Xu, Min},
+  journal={arXiv preprint arXiv:2508.01112},
+  year={2025}
 }
 ```
