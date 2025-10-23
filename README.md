@@ -57,7 +57,7 @@ The structure of the dataset and model files is as follows:
 │           ├── burger
 │           ├── ...
 │   | Genesis
-│       | MASIV
+│       | multi_sequence
 │
 ```
 ### MASIV Multi-Sequence Dataset
@@ -115,7 +115,7 @@ python train_dynamic.py --config_path config/spring_gaus/real_capture/bun.yaml -
 ```
 
 ```
-python train_dynamic.py --config_path config/genesis/multi_series/default.yaml --source_path data/Genesis/multi_series/0_0 --model_path output/genesis/multi_series/0_0 --reg_scale --reg_alpha env.pretrain=plasticine sim.center=1.0 sim.size=2.0 
+python train_dynamic.py --config_path config/genesis/multi_sequence/default.yaml --source_path data/Genesis/multi_sequence/0_0 --model_path output/genesis/multi_sequence/0_0 --reg_scale --reg_alpha env.pretrain=plasticine sim.center=1.0 sim.size=2.0 
 ```
 
 Use `--model_path` to specify the directory where the trained model and intermediate states will be saved.
