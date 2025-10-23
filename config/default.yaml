@@ -125,7 +125,7 @@ meta:
   resume: null
   r_smth: 0.0
   r_arap: 0.0
-  w_velo: 1.0
+  w_velo: 0.0
   w_traj: 10.0
   w_surf: 1.0
   w_cont: 0.0

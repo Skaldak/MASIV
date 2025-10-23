@@ -55,9 +55,9 @@ physics:
   mpm_iter_cnt: 200
   n_frames: 20
   offset:
-  - 0.0
-  - 0.0
-  - 0.0
+  - 1.5
+  - -0.5
+  - 1.5
   opacity_threshold: 0.005
   params:
     Poisson ratio:
